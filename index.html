@@ -517,15 +517,6 @@ $('date').value=todayStr();
 $('mon').value=todayStr().slice(0,7);
 syncUI();
 loadMonth();
-
-['d1','d2','d3'].forEach(function(id){
-  $(id).addEventListener('toggle',function(){
-    if(!this.open)return;
-    ['d1','d2','d3'].forEach(function(other){
-      if(other!==id)$(other).open=false;
-    });
-  });
-});
 </script>
 </body>
 </html>
