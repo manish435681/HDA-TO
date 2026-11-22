@@ -146,24 +146,18 @@ tr.sel td{background:var(--aq-t)}
   .sum{grid-template-columns:repeat(2,1fr)}
   .sum .k:last-child{grid-column:span 2}
   #xs{grid-template-columns:repeat(2,1fr)!important}
-  .sc{overflow:visible;margin:0;padding:0}
-  table{display:block;width:100%;min-width:0;font-size:13px}
-  thead{display:none}
-  tbody{display:grid;gap:8px}
-  tbody tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--bd);border-radius:8px;overflow:hidden}
-  tbody tr:hover{background:transparent}
-  th,td{padding:8px 10px}
-  td{display:flex;flex-direction:column;min-width:0;gap:2px;white-space:normal;overflow-wrap:anywhere;border-bottom:0}
-  td::before{font-size:10px;font-weight:650;color:var(--mu)}
-  td:nth-child(1)::before{content:"Date"}
-  td:nth-child(2)::before{content:"Duty"}
-  td:nth-child(3){grid-column:1/-1}
-  td:nth-child(3)::before{content:"Type"}
-  td:nth-child(4)::before{content:"Actual"}
-  td:nth-child(5)::before{content:"Extra"}
-  td.n{text-align:left}
-  td.e{display:block;grid-column:1/-1}
-  td.e::before{display:none}
+  .sc{overflow-x:auto;margin:0 -4px;padding:0 4px}
+  table{display:table;table-layout:fixed;width:100%;min-width:0;font-size:11px}
+  thead{display:table-header-group}
+  tbody{display:table-row-group}
+  tbody tr{display:table-row}
+  th,td{padding:8px 3px}
+  th:nth-child(1),td:nth-child(1){width:29%}
+  th:nth-child(2),td:nth-child(2){width:15%}
+  th:nth-child(3),td:nth-child(3){width:22%}
+  th:nth-child(4),td:nth-child(4){width:16%}
+  th:nth-child(5),td:nth-child(5){width:18%}
+  td:nth-child(3){white-space:normal;overflow-wrap:anywhere}
   .act{flex-direction:column-reverse;align-items:stretch}
   .act button{width:100%;margin-left:0}
   .ft .m{width:100%}
