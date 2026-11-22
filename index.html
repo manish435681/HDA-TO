@@ -221,7 +221,7 @@ tr.sel td{background:var(--aq-t)}
   </div>
  </details>
 
- <details class="c" id="d2" open>
+ <details class="c" id="d2">
   <summary class="ct">2. Entries</summary>
 
   <div class="sc">
@@ -517,6 +517,15 @@ $('date').value=todayStr();
 $('mon').value=todayStr().slice(0,7);
 syncUI();
 loadMonth();
+
+['d1','d2','d3'].forEach(function(id){
+  $(id).addEventListener('toggle',function(){
+    if(!this.open)return;
+    ['d1','d2','d3'].forEach(function(other){
+      if(other!==id)$(other).open=false;
+    });
+  });
+});
 </script>
 </body>
 </html>
